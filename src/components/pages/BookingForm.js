@@ -181,12 +181,17 @@ function BookingForm() {
 
         try {
             // Create booking via Django API
+            console.log('Sending request to:', `${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${apiEndpoint}`);
+            console.log('Payload:', payload);
+            
             const res = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${apiEndpoint}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                credentials: 'include'
             });
 
             // Parse response safely (some errors may return non-JSON)
