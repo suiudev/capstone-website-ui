@@ -181,10 +181,10 @@ function BookingForm() {
 
         try {
             // Create booking via Django API
-            console.log('Sending request to:', `${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${apiEndpoint}`);
+            console.log('Sending request to:', `${process.env.REACT_APP_API_URL || 'https://wsmansionresort.pythonanywhere.com${apiEndpoint}`);
             console.log('Payload:', payload);
             
-            const res = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${apiEndpoint}`, {
+            const res = await fetch(`${process.env.REACT_APP_API_URL || 'https://wsmansionresort.pythonanywhere.com'}${apiEndpoint}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -215,7 +215,7 @@ function BookingForm() {
 
             // On success, open a single invoice: if an invoice already exists, reuse it; otherwise create.
             const bookingReference = data.booking_reference;
-            const baseUrl = (process.env.REACT_APP_API_URL || 'http://localhost:8000');
+            const baseUrl = (process.env.REACT_APP_API_URL || 'https://wsmansionresort.pythonanywhere.com');
             try { localStorage.setItem('last_booking_ref', bookingReference); } catch (_) {}
 
             // First, try to load existing invoice id saved earlier for this booking
