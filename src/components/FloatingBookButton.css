@@ -1,0 +1,77 @@
+.floating-book-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #1c1cbf, #4E1CB1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(28, 28, 191, 0.4);
+  z-index: 1000;
+  display: none; /* Hidden by default on desktop */
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.floating-book-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(28, 28, 191, 0.6);
+  background: linear-gradient(135deg, #4E1CB1, #1c1cbf);
+}
+
+.floating-book-button:active {
+  transform: translateY(-1px);
+}
+
+.floating-book-button i {
+  font-size: 20px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(28, 28, 191, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(28, 28, 191, 0.7);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .floating-book-button {
+    display: flex; /* Show on tablet and mobile */
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .floating-book-button i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .floating-book-button {
+    bottom: 80px;
+    right: 15px;
+    padding: 14px 22px;
+    font-size: 15px;
+    border-radius: 30px;
+  }
+
+  .floating-book-button i {
+    font-size: 18px;
+  }
+
+  .floating-book-button span {
+    display: inline;
+  }
+}

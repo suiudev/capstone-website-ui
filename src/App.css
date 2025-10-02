@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.about-us,
+.experiences,
+.gallery,
+.book {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.experiences {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.gallery {
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.book {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+/* Map Section on Home Page */
+.map-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1c1cbf;
+  margin-bottom: 20px;
+  font-family: Georgia, 'Playfair Display', serif;
+}
+
+.map-description {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+}
+
+.map-container-home {
+  margin: 0 auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-location-code {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Responsive Map Section */
+@media screen and (max-width: 960px) {
+  .map-section-home {
+    padding: 60px 20px;
+  }
+
+  .map-title {
+    font-size: 40px;
+  }
+
+  .map-description {
+    font-size: 18px;
+  }
+
+  .map-container-home iframe {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map-section-home {
+    padding: 50px 15px;
+  }
+
+  .map-title {
+    font-size: 32px;
+  }
+
+  .map-description {
+    font-size: 16px;
+  }
+
+  .map-container-home iframe {
+    height: 300px;
+  }
+
+  .map-location-code {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-section-home {
+    padding: 40px 10px;
+  }
+
+  .map-title {
+    font-size: 28px;
+  }
+
+  .map-description {
+    font-size: 14px;
+  }
+
+  .map-container-home iframe {
+    height: 250px;
+  }
+
+  .map-location-code {
+    font-size: 14px;
+  }
+}
